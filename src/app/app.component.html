@@ -225,16 +225,29 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+      <h1>Hello, Welcome</h1>
+      <p>Here is a list of fishing gear to get you started out. 🤠</p>
       <div class="divider" role="separator" aria-label="Divider"></div>
-      @for (item of [ { title: 'Explore the Docs', link: 'https://angular.dev'
-      }, { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials'
-      }, { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' }, { title:
-      'Angular Language Service', link:
-      'https://angular.dev/tools/language-service' }, { title: 'Angular
-      DevTools', link: 'https://angular.dev/tools/devtools' }, ]; track
-      item.title) {
+      @for (item of [ { title: 'Quality Casting graphite rod $40
+      myrating:⭐⭐⭐⭐⭐', link:
+      'https://www.basspro.com/shop/en/bass-pro-shops-graphite-series-casting-rod-101048312'
+      }, { title: 'Quality baitcasting reel $25 myrating:⭐⭐⭐⭐', link:
+      'https://www.dickssportinggoods.com/p/quantum-nitrous-baitcasting-reel-19qutuntrs100rhbtree/19qutuntrs100rhbtree?Product=ProductSuggest'
+      }, { title: 'Quality spinning rod+reel combo $60 myrating:⭐⭐⭐⭐⭐',
+      link:
+      'https://www.basspro.com/shop/en/profishiency-grey-white-spinning-combo'
+      }, { title: 'Soft plastic worms $6.50', link:
+      'https://www.meijer.com/shopping/product/berkley-powerbait-power-worms-/2863265051.html'
+      }, { title: 'Fishing line for the baitcaster $24', link:
+      'https://www.basspro.com/shop/en/berkley-trilene-professional-grade-100-fluorocarbon-line'
+      }, { title: 'Fishing line for the spinning reel $25 myrating:⭐⭐⭐⭐⭐',
+      link:
+      'https://www.basspro.com/shop/en/spiderwire-stealth-smooth-braided-line'
+      }, { title: 'Worm hooks $5.30', link:
+      'https://www.meijer.com/shopping/product/berkley-fusion19-ewg-hooks/2863271281.html'
+      }, { title: 'Jig 3/8 Oz $4.00', link:
+      'https://www.basspro.com/shop/en/strike-king-denny-brauer-premier-pro-model-jig'
+      }, ]; track item.title) {
       <a class="pill" [href]="item.link" target="_blank" rel="noopener">
         <span>{{ item.title }}</span>
         <svg
@@ -276,7 +289,7 @@
   <!-- app.component.html -->
 
   <div>
-    <button (click)="addItem()">Add Item</button>
+    <button (click)="addItem()">Press Me!(I deserve it)</button>
     <ul>
       <li *ngFor="let item of items">{{ item | json }}</li>
     </ul>
