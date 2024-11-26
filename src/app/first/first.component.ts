@@ -14,10 +14,15 @@ export class FirstComponent {
 
   @Input() data= 'Результаты будут опубликованы здесь'
 
+  name: string = '';
+  imageUrl: string = '';
+
    async buttonPress() {
     const response = this.http.get<any>('https://pokeapi.co/api/v2/pokemon/ditto')
     const result = await firstValueFrom(response)
-    console.log({data: result});
-    this.data = JSON.stringify(result)
+    console.log(result);
+    this.name = result.name;
+    this.imageUrl = result.sprites.front_default;
   }
 }
+
